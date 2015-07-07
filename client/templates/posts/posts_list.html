@@ -1,0 +1,40 @@
+<template name="postsList">
+
+
+
+  <!-- Page heading -->
+
+
+  <div class="wrapper wrapper-content animated fadeInUp">
+
+      <div class="ibox">
+          <div class="ibox-title">
+              <h5>Liste des projets</h5>
+              <div class="ibox-tools">
+                  <a href="{{pathFor 'postSubmit'}}" class="btn btn-primary btn-sm">Ajouter un projet</a>
+              </div>
+          </div>
+          <div class="ibox-content">
+              <div class="row m-b-sm m-t-sm">
+                  <div class="col-md-4">
+                    <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                    <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+
+                  </div>
+                  <div class="col-md-8">
+                      </div>
+              </div>
+
+              <div class="project-list">
+                <table class="table table-hover">
+                    <tbody>
+                      {{#each posts}}
+                        {{> postItem}}
+                      {{/each}}
+                    </tbody>
+                </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>
